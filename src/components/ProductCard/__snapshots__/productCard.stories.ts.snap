@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard Default smoke-test 1`] = `
+{
+  "checked": undefined,
+  "children": [
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Image of product Product 1 $100",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+  ],
+  "name": "productcard--default",
+  "pressed": undefined,
+  "role": "WebArea",
+  "value": undefined,
+}
+`;
