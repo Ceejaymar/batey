@@ -8,6 +8,12 @@ const Nav = styled.nav`
   gap: 2rem;
 `;
 
+const Brand = styled.div`
+  font-family: 'EB Garamond';
+  font-size: 2rem;
+  font-weight: 600;
+`;
+
 const NavList = styled.ul`
   display: flex;
   gap: 1rem;
@@ -17,11 +23,15 @@ const NavList = styled.ul`
 
 const NavLink = styled(NLink)`
   text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+  letter-spacing: -0.04rem;
 `;
 
 const Navigation = () => {
   return (
-    <Nav data-testId="navigation">
+    <Nav data-testid="navigation">
+      <Brand>Batey</Brand>
       <NavList>
         <li>
           <NavLink to="/">Home</NavLink>
@@ -38,7 +48,12 @@ const Navigation = () => {
       </NavList>
       <div>
         <Link to="cart">
-          <ShoppingCart size={32} weight="thin" color="black" />
+          <ShoppingCart
+            aria-label="View shopping cart"
+            size={28}
+            weight="thin"
+            color="black"
+          />
         </Link>
       </div>
     </Nav>

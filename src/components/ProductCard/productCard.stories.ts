@@ -10,7 +10,7 @@ const exampleProduct = {
 };
 
 const meta = {
-  title: 'ProductCard',
+  title: 'components/ProductCard',
   component: ProductCard,
 } satisfies Meta<typeof ProductCard>;
 

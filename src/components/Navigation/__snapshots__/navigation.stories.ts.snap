@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Default smoke-test 1`] = `
+{
+  "checked": undefined,
+  "children": [
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Home",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "About",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Shop",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Contact",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "View shopping cart",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+  ],
+  "name": "navigation--default",
+  "pressed": undefined,
+  "role": "WebArea",
+  "value": undefined,
+}
+`;
+
+exports[`components/Navigation Default smoke-test 1`] = `
+{
+  "checked": undefined,
+  "children": [
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Home",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "About",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Shop",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Contact",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "View shopping cart",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+  ],
+  "name": "components-navigation--default",
+  "pressed": undefined,
+  "role": "WebArea",
+  "value": undefined,
+}
+`;

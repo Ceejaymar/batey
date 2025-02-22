@@ -19,3 +19,23 @@ exports[`ProductCard Default smoke-test 1`] = `
   "value": undefined,
 }
 `;
+
+exports[`components/ProductCard Default smoke-test 1`] = `
+{
+  "checked": undefined,
+  "children": [
+    {
+      "checked": undefined,
+      "children": undefined,
+      "name": "Image of product Product 1 $100",
+      "pressed": undefined,
+      "role": "link",
+      "value": undefined,
+    },
+  ],
+  "name": "components-productcard--default",
+  "pressed": undefined,
+  "role": "WebArea",
+  "value": undefined,
+}
+`;
