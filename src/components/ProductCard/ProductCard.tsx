@@ -17,7 +17,7 @@ const Card = styled(Link)`
 `;
 
 const Image = styled.img`
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 `;
 
 const ProductCard: React.FC<ProductProps> = ({ product }) => {

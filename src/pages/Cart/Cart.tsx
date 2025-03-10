@@ -1,8 +1,19 @@
+import styled from 'styled-components';
+import Transition from '../../utils/transition';
+
+const CartSection = styled.section`
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+`;
+
 const Cart = () => {
   return (
-    <div>
-      <h1>Cart</h1>
-    </div>
+    <Transition>
+      <CartSection>Your shopping cart in empty!</CartSection>
+    </Transition>
   );
 };
 

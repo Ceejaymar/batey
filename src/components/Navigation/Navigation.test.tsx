@@ -23,9 +23,10 @@ describe('Navigation', () => {
     const links = screen.getAllByRole('link');
 
     expect(links[0]).toHaveAttribute('href', '/');
-    expect(links[1]).toHaveAttribute('href', '/about');
-    expect(links[2]).toHaveAttribute('href', '/shop');
+    expect(links[1]).toHaveAttribute('href', '/lookbook');
+    expect(links[2]).toHaveAttribute('href', '/about');
     expect(links[3]).toHaveAttribute('href', '/contact');
-    expect(links[4]).toHaveAttribute('href', '/cart');
+    expect(links[4]).toHaveAttribute('href', '/shop');
+    expect(links[5]).toHaveAttribute('href', '/cart');
   });
 });

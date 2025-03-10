@@ -1,8 +1,10 @@
+import Transition from '../../utils/transition';
+
 const PageNotFound = () => {
   return (
-    <div>
+    <Transition>
       <h1>PageNotFound</h1>
-    </div>
+    </Transition>
   );
 };
 

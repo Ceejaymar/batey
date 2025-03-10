@@ -1,8 +1,10 @@
+import Transition from '../../utils/transition';
+
 const About = () => {
   return (
-    <div>
+    <Transition>
       <h1>About</h1>
-    </div>
+    </Transition>
   );
 };
 

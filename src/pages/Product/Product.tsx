@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Transition from '../../utils/transition';
 import Button from '../../components/Button/Button';
 
 const SizeButton = styled(Button)<
@@ -9,12 +10,12 @@ const SizeButton = styled(Button)<
   background-color: white;
 `;
 
-const Product = () => {
+const Product: React.FC = () => {
   const location = useLocation();
   const product = location.state?.product;
 
   return (
-    <div>
+    <Transition>
       <img src={product.images[0]} />
       <h2>{product.name}</h2>
       <p>{product.description}</p>
@@ -27,7 +28,7 @@ const Product = () => {
           </SizeButton>
         );
       })}
-    </div>
+    </Transition>
   );
 };
 

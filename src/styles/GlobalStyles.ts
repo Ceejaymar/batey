@@ -43,4 +43,33 @@ export const GlobalStyles = createGlobalStyle`
       transition: none;
     }
   }
+
+  .fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+}
+
+  .slide-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0f0f0f;
+    transform-origin: bottom;
+  }
+
+  .slide-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0f0f0f;
+    transform-origin: top;
+  }
 `;

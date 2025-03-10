@@ -6,16 +6,22 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding: 1.5rem 0;
 `;
 
-const Brand = styled.div`
+const Brand = styled.span`
   font-family: 'EB Garamond';
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 `;
 
 const NavList = styled.ul`
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin-left: auto;
   list-style: none;
@@ -23,7 +29,8 @@ const NavList = styled.ul`
 
 const NavLink = styled(NLink)`
   text-decoration: none;
-  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-size: 1.1rem;
   color: black;
   letter-spacing: -0.04rem;
 `;
@@ -31,27 +38,32 @@ const NavLink = styled(NLink)`
 const Navigation = () => {
   return (
     <Nav data-testid="navigation">
-      <Brand>Batey</Brand>
+      <NavLink to="/">
+        <Brand>Batey</Brand>
+      </NavLink>
       <NavList>
-        <li>
+        {/* <li>
           <NavLink to="/">Home</NavLink>
+        </li> */}
+        <li>
+          <NavLink to="lookbook">lookbook</NavLink>
         </li>
         <li>
-          <NavLink to="about">About</NavLink>
+          <NavLink to="about">our story</NavLink>
         </li>
         <li>
-          <NavLink to="shop">Shop</NavLink>
+          <NavLink to="contact">contact</NavLink>
         </li>
         <li>
-          <NavLink to="contact">Contact</NavLink>
+          <NavLink to="shop">shop</NavLink>
         </li>
       </NavList>
       <div>
         <Link to="cart">
           <ShoppingCart
             aria-label="View shopping cart"
-            size={28}
-            weight="thin"
+            size={24}
+            weight="regular"
             color="black"
           />
         </Link>
