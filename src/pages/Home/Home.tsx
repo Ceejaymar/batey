@@ -116,7 +116,7 @@ const Home: React.FC = () => {
         </FeaturedDesc>
 
         <FeaturedProduct>
-          <ProductCard product={products[0]} />
+          <ProductCard product={products[9]} />
         </FeaturedProduct>
       </FeaturedProductSection>
 

@@ -1,3 +1,5 @@
+import flipFlopsImage from '../assets/images/products/kaboom_flip-flop.jpg';
+
 export const products = [
   {
     productId: 1,
@@ -164,5 +166,21 @@ export const products = [
     dateAdded: '2021-01-01',
     tags: ['Tag 1', 'Tag 2'],
     color: 'black',
+  },
+  {
+    productId: 9,
+    name: 'Comfort slides',
+    category: 'footwear',
+    price: 59,
+    images: [flipFlopsImage],
+    imageAlt: 'beige sandals',
+    description: 'natural rubber flip flops',
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    restockDate: '2021-01-01',
+    material: ['Material 1', 'Material 2'],
+    reviews: [{ reviewId: 1, rating: 5, comment: 'Great product' }],
+    dateAdded: '2021-01-01',
+    tags: ['footwear', 'Tag 2'],
+    color: 'beige',
   },
 ];

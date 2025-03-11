@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const FooterSection = styled.footer`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 5rem;
 
   & h4 {
     margin-bottom: 1rem;
@@ -79,7 +80,7 @@ const Footer: React.FC = () => (
   <FooterSection>
     <SubscribeContent>
       <h4>Subscribe to our newsletter</h4>
-      <p>Sign up and receive news, updates, product information</p>
+      <p>Sign up and receive news, updates and product information.</p>
       <Form>
         <FormInput type="email" placeholder="Email address" />
         <FormButton>Subscribe</FormButton>
@@ -87,7 +88,7 @@ const Footer: React.FC = () => (
     </SubscribeContent>
     <SiteContent>
       <AboutContent>
-        <h4>about us</h4>
+        <h4>site map</h4>
         <FooterLink to="/about">our story</FooterLink>
         <FooterLink to="/lookbook">lookbook</FooterLink>
         <FooterLink to="/shop">shop</FooterLink>

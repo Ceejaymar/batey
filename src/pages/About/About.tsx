@@ -1,9 +1,19 @@
+import styled from 'styled-components';
+
 import Transition from '../../utils/transition';
+
+const AboutSection = styled.section`
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+`;
 
 const About = () => {
   return (
     <Transition>
-      <h1>About</h1>
+      <AboutSection>Check back in soon!</AboutSection>
     </Transition>
   );
 };
