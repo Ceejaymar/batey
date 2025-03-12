@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Quotes } from '@phosphor-icons/react';
 
 import ProductCard from '../../components/ProductCard/ProductCard';
 import headerImage from '../../assets/images/home/fd-garden.jpg';
@@ -11,20 +12,61 @@ import { products } from '../../config/products';
 
 const HeaderSection = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 700px;
   background-image: url(${headerImage});
   background-size: cover;
   background-position: center;
-
   border-image: linear-gradient(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 0%, 0.3)) fill
     1;
+  font-family: 'eb garamond';
+
+  & span {
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px #00000011;
+  }
+`;
+
+const HeaderH2 = styled.h2`
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  width: 40%;
+  margin-bottom: 2rem;
+`;
+
+const Button = styled(Link)`
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 2px solid white;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'eb garamond';
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 `;
 
 const NewArrivalsSection = styled.section`
-  padding: 3rem;
+  padding: 3rem 3rem 5rem 3rem;
   background-color: #ede4d8;
+
+  & h2 {
+    line-height: 1;
+  }
 
   & > div {
     display: flex;
@@ -45,42 +87,23 @@ const NewArrivalsSection = styled.section`
   }
 `;
 
-const HeaderH2 = styled.h2`
-  font-size: 4rem;
-  font-weight: 600;
-  text-align: center;
-  color: white;
-  width: 50%;
-`;
-
-const ItalicSpan = styled.span`
-  font-style: italic;
-  font-weight: 300;
-  text-shadow: 2px 2px 2px #00000011;
-`;
-
-const Button = styled(Link)`
-  display: inline-block;
-  background-color: transparent;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-decoration: none;
-  text-transform: capitalize;
-  border: 2px solid white;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover {
-    background-color: white;
-    color: black;
-  }
-`;
-
 const QuoteSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'EB Garamond';
+  font-size: 4rem;
+  font-weight: 300;
+  font-style: italic;
   height: 350px;
-  background-color: #fff;
+  background-color: #284941;
+  color: #ede4d8;
+
+  & svg {
+    position: relative;
+    top: -2rem;
+  }
 `;
 
 const FeaturedProductSection = styled.section`
@@ -176,9 +199,9 @@ const Home: React.FC = () => {
     <Transition>
       <HeaderSection>
         <HeaderH2>
-          Cultivated Cloth, Crafted for <ItalicSpan>Comfort</ItalicSpan>.
-          <Button to="/shop">Shop All</Button>
+          <span>Cultivated</span> Cloth, Crafted for <span>Comfort</span>.
         </HeaderH2>
+        <Button to="/shop">Shop All</Button>
       </HeaderSection>
       <NewArrivalsSection>
         <h2>New Arrivals</h2>
@@ -188,7 +211,10 @@ const Home: React.FC = () => {
           ))}
         </div>
       </NewArrivalsSection>
-      <QuoteSection> </QuoteSection>
+      <QuoteSection>
+        Fashion is all about feeling good
+        <Quotes size={32} weight="fill" />
+      </QuoteSection>
 
       <FeaturedProductSection>
         <FeaturedDesc>
