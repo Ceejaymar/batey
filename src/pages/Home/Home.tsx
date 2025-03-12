@@ -204,7 +204,7 @@ const Home: React.FC = () => {
         </FeaturedDesc>
 
         <FeaturedProduct>
-          <ProductCard product={products[9]} content="balanced" />
+          <ProductCard product={products[9]} />
         </FeaturedProduct>
       </FeaturedProductSection>
       <SubscribeSection>
