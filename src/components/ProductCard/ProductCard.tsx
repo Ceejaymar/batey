@@ -15,15 +15,18 @@ const Card = styled(Link)`
   flex-basis: 1;
   max-width: 17rem;
   text-decoration: none;
-  color: white;
-  text-align: center;
+  color: #284941;
+
+  /* text-align: center; */
 
   & img {
     margin-bottom: 1rem;
   }
 
-  & p {
-    display: block;
+  & div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
   }
 `;
 
@@ -36,8 +39,10 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
     <Card to={`/product/${product.productId}`} state={{ product }}>
       <Image src={product.images[0]} alt="Image of product" />
 
-      <p>{product.name}</p>
-      <p>${product.price}</p>
+      <div>
+        <p>{product.name}</p>
+        <p>${product.price}</p>
+      </div>
     </Card>
   );
 };

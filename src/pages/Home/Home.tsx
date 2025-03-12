@@ -22,6 +22,29 @@ const HeaderSection = styled.section`
     1;
 `;
 
+const NewArrivalsSection = styled.section`
+  padding: 3rem;
+  background-color: #ede4d8;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  & a {
+    color: #284941;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & p {
+    /* display: inline-block; */
+    /* text-align: start; */
+  }
+`;
+
 const HeaderH2 = styled.h2`
   font-size: 4rem;
   font-weight: 600;
@@ -157,6 +180,14 @@ const Home: React.FC = () => {
           <Button to="/shop">Shop All</Button>
         </HeaderH2>
       </HeaderSection>
+      <NewArrivalsSection>
+        <h2>New Arrivals</h2>
+        <div>
+          {products.slice(0, 3).map((product) => (
+            <ProductCard key={product.productId} product={product} />
+          ))}
+        </div>
+      </NewArrivalsSection>
       <QuoteSection> </QuoteSection>
 
       <FeaturedProductSection>
@@ -173,7 +204,7 @@ const Home: React.FC = () => {
         </FeaturedDesc>
 
         <FeaturedProduct>
-          <ProductCard product={products[9]} />
+          <ProductCard product={products[9]} content="balanced" />
         </FeaturedProduct>
       </FeaturedProductSection>
       <SubscribeSection>
@@ -181,7 +212,7 @@ const Home: React.FC = () => {
           <img src={shirtsOnDisplay} />
         </ImgContainer>
         <div>
-          <h3>Stay in the loop</h3>
+          <h3>Join our community</h3>
           <p>Get notified when our next collection drops.</p>
           <form>
             <SubscribeInput type="email" placeholder="Email address" />
