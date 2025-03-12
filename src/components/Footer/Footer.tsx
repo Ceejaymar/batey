@@ -105,7 +105,7 @@ const Footer: React.FC = () => (
         </FooterLink>
       </ContactContent>
     </SiteContent>
-    <FooterBrand>batey</FooterBrand>
+    <FooterBrand>batéy</FooterBrand>
   </FooterSection>
 );
 

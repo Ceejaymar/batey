@@ -39,7 +39,7 @@ const Navigation = () => {
   return (
     <Nav data-testid="navigation">
       <NavLink to="/">
-        <Brand>Batey</Brand>
+        <Brand>Batéy</Brand>
       </NavLink>
       <NavList>
         {/* <li>

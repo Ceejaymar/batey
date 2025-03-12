@@ -13,10 +13,6 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth; 
   }
 
-  body {
-    line-height: 1.5;
-  }
-
   img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
