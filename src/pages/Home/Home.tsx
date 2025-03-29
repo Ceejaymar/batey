@@ -151,12 +151,15 @@ const SubscribeSection = styled.section`
   color: #284941;
 
   & h3 {
-    font-size: 2.5rem;
+    font-family: 'EB Garamond';
+    font-size: 3rem;
     font-weight: 300;
+    line-height: 1;
+    margin-bottom: 1.5rem;
   }
 
   & form {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
 `;
 
