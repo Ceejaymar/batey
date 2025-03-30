@@ -32,9 +32,12 @@ const Form = styled.form`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 1rem;
+  grid-row-gap: 1.5rem;
 `;
 
 const InputWrapper = styled.div`
+  height: max-content;
+
   &:first-of-type {
     grid-area: 1 / 1 / 2 / 3;
   }
@@ -52,11 +55,11 @@ const InputWrapper = styled.div`
   }
 
   position: relative;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 
   label {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 0.75rem;
     transform: translateY(-50%);
     transition: all 0.2s ease;
@@ -97,7 +100,7 @@ const Button = styled.button`
   padding: 0.8rem 2rem;
   background-color: #f3a047;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: all 0.4s ease;
 
   &:hover {
     background-color: #284941;
