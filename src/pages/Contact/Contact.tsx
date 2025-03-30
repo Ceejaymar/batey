@@ -8,6 +8,7 @@ import {
 const Section = styled.section`
   display: flex;
   justify-content: space-between;
+  padding: 5rem 0;
 `;
 
 const ContactContent = styled.div`
@@ -27,13 +28,10 @@ const FormDiv = styled.div`
 `;
 
 const Form = styled.form`
-  /* display: flex;
-  flex-direction: column; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 1rem;
 `;
 
 const InputWrapper = styled.div`
@@ -52,49 +50,61 @@ const InputWrapper = styled.div`
   &:nth-of-type(5) {
     grid-area: 4 / 1 / 6 / 5;
   }
+
+  position: relative;
+  margin-bottom: 1rem;
+
+  label {
+    position: absolute;
+    top: 40%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    background: transparent;
+    padding: 0 0.25rem;
+    color: grey;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem 1rem;
+    border: 1px solid #ccc;
+    outline: 2px solid transparent;
+
+    &:focus {
+      /* outline: 2px solid #000; */
+    }
+  }
+
+  input:focus + label,
+  input:not(:placeholder-shown) + label,
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    top: -0.75rem;
+    left: 0.5rem;
+    font-size: 0.75rem;
+    color: black;
+  }
 `;
 
-// const Label = styled.label`;
-//   position: absolute;
-//   top: 50%;
-//   left: 0.5rem;
-//   transform: translateY(-50%);
-//   font-size: 1rem;
-//   color: #aaa;
-//   pointer-events: none;
-//   transition: all 0.3s ease;
+const Button = styled.button`
+  color: #ffffff;
+  border: 1px solid #f3a047;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 0.8rem 2rem;
+  background-color: #f3a047;
+  cursor: pointer;
+  transition: all 0.4s;
 
-//   &.focused {
-//     top: -0.5rem;
-//     font-size: 0.8rem;
-//     color: #333;
-//   }
-// `;
-
-// const InputWrapper = styled.div`
-//   position: relative;
-//   margin-bottom: 1rem;
-
-//   input,
-//   textarea {
-//     width: 100%;
-//     padding: 0.5rem;
-//     border: 1px solid #ccc;
-//     border-radius: 4px;
-//     outline: none;
-//     font-size: 1rem;
-
-//     &:focus + ${Label}, &:not(:placeholder-shown) + ${Label} {
-//       top: -0.5rem;
-//       font-size: 0.8rem;
-//       color: #333;
-//     }
-//   }
-
-//   textarea {
-//     resize: none;
-//   }
-// `;
+  &:hover {
+    background-color: #284941;
+    color: white;
+    border-color: #284941;
+  }
+`;
 
 const Contact = () => {
   return (
@@ -112,48 +122,38 @@ const Contact = () => {
       <FormDiv>
         <Form>
           <InputWrapper>
-            <label htmlFor="first-name">First Name</label>
             <input
               type="text"
               name="first-name"
               id="first-name"
-              placeholder="first name"
+              placeholder=" "
             />
+            <label htmlFor="first-name">First Name</label>
           </InputWrapper>
           <InputWrapper>
-            <label htmlFor="last-name">Last Name</label>
             <input
               type="text"
               name="last-name"
-              id="lst-name"
-              placeholder="last name"
+              id="last-name"
+              placeholder=" "
             />
+            <label htmlFor="last-name">Last Name</label>
           </InputWrapper>
           <InputWrapper>
+            <input type="text" name="email" id="email" placeholder=" " />
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="email" />
           </InputWrapper>
           <InputWrapper>
+            <input type="text" name="subject" id="subject" placeholder=" " />
             <label htmlFor="subject">Subject</label>
-            <input
-              type="text"
-              name="subject"
-              id="subject"
-              placeholder="Subject"
-            />
           </InputWrapper>
           <InputWrapper>
+            <textarea name="message" id="message" placeholder=" " rows={5} />
             <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="message"
-              // rows={5}
-            />
           </InputWrapper>
-          {/* <button type="submit" value="submit">
+          <Button type="submit" value="submit">
             send
-          </button> */}
+          </Button>
         </Form>
       </FormDiv>
     </Section>
