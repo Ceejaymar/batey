@@ -35,7 +35,7 @@ const NavLink = styled(NLink)`
   letter-spacing: -0.04rem;
 `;
 
-const Navigation = () => {
+function Navigation() {
   return (
     <Nav data-testid="navigation">
       <NavLink to="/">
@@ -70,6 +70,6 @@ const Navigation = () => {
       </div>
     </Nav>
   );
-};
+}
 
 export default Navigation;

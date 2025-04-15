@@ -9,7 +9,7 @@ const SizeButton = styled(Button)<ButtonHTMLAttributes<HTMLButtonElement>>`
   background-color: white;
 `;
 
-const Product = () => {
+function Product() {
   const location = useLocation();
   const product = location.state?.product;
 
@@ -29,6 +29,6 @@ const Product = () => {
       })}
     </Transition>
   );
-};
+}
 
 export default Product;

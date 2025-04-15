@@ -1,4 +1,3 @@
-import { type FC } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { siteLinks, socialLinks } from '../../config/appData';
@@ -78,36 +77,38 @@ const FooterBrand = styled.p`
 
 const FooterLink = styled(Link)``;
 
-const Footer: FC = () => (
-  <FooterSection>
-    <SubscribeContent>
-      <h4>Subscribe to our newsletter</h4>
-      <p>Sign up and receive news, updates and product information.</p>
-      <Form>
-        <FormInput type="email" placeholder="Email address" />
-        <FormButton>Subscribe</FormButton>
-      </Form>
-    </SubscribeContent>
-    <SiteContent>
-      <AboutContent>
-        <h4>site map</h4>
-        {siteLinks.map((link) => (
-          <FooterLink key={link.name} to={link.path}>
-            {link.name}
-          </FooterLink>
-        ))}
-      </AboutContent>
-      <ContactContent>
-        <h4>follow us</h4>
-        {socialLinks.map((link) => (
-          <FooterLink key={link.name} to={link.path}>
-            {link.name}
-          </FooterLink>
-        ))}
-      </ContactContent>
-    </SiteContent>
-    <FooterBrand>batéy</FooterBrand>
-  </FooterSection>
-);
+function Footer() {
+  return (
+    <FooterSection>
+      <SubscribeContent>
+        <h4>Subscribe to our newsletter</h4>
+        <p>Sign up and receive news, updates and product information.</p>
+        <Form>
+          <FormInput type="email" placeholder="Email address" />
+          <FormButton>Subscribe</FormButton>
+        </Form>
+      </SubscribeContent>
+      <SiteContent>
+        <AboutContent>
+          <h4>site map</h4>
+          {siteLinks.map((link) => (
+            <FooterLink key={link.name} to={link.path}>
+              {link.name}
+            </FooterLink>
+          ))}
+        </AboutContent>
+        <ContactContent>
+          <h4>follow us</h4>
+          {socialLinks.map((link) => (
+            <FooterLink key={link.name} to={link.path}>
+              {link.name}
+            </FooterLink>
+          ))}
+        </ContactContent>
+      </SiteContent>
+      <FooterBrand>batéy</FooterBrand>
+    </FooterSection>
+  );
+}
 
 export default Footer;

@@ -10,7 +10,7 @@ const ProductsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const Shop = () => {
+function Shop() {
   return (
     <Transition>
       <h1>Shop</h1>
@@ -21,6 +21,6 @@ const Shop = () => {
       </ProductsContainer>
     </Transition>
   );
-};
+}
 
 export default Shop;

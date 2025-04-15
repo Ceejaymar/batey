@@ -10,12 +10,12 @@ const AboutSection = styled.section`
   font-size: 2rem;
 `;
 
-const About = () => {
+function About() {
   return (
     <Transition>
       <AboutSection>Check back in soon!</AboutSection>
     </Transition>
   );
-};
+}
 
 export default About;

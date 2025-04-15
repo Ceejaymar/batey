@@ -109,7 +109,7 @@ const Button = styled.button`
   }
 `;
 
-const Contact = () => {
+function Contact() {
   return (
     <Section>
       <ContactContent>
@@ -161,6 +161,6 @@ const Contact = () => {
       </FormDiv>
     </Section>
   );
-};
+}
 
 export default Contact;

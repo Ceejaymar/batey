@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-interface ProductProps {
+type ProductProps = {
   product: {
     productId: number;
     name: string;
@@ -9,7 +9,7 @@ interface ProductProps {
     images: string[];
     price: number;
   };
-}
+};
 
 const Card = styled(Link)`
   flex-basis: 1;
@@ -34,7 +34,7 @@ const Image = styled.img`
   /* border-radius: 0.5rem; */
 `;
 
-const ProductCard: React.FC<ProductProps> = ({ product }) => {
+function ProductCard({ product }: ProductProps) {
   return (
     <Card to={`/product/${product.productId}`} state={{ product }}>
       <Image src={product.images[0]} alt="Image of product" />
@@ -45,5 +45,5 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
       </div>
     </Card>
   );
-};
+}
 export default ProductCard;

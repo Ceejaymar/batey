@@ -10,12 +10,12 @@ const Section = styled.section`
   font-size: 2rem;
 `;
 
-const PageNotFound = () => {
+function PageNotFound() {
   return (
     <Transition>
       <Section>Nothing here!</Section>
     </Transition>
   );
-};
+}
 
 export default PageNotFound;

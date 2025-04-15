@@ -19,7 +19,7 @@ const NavLink = styled(Link)`
   letter-spacing: -0.04rem;
 `;
 
-const Cart = () => {
+function Cart() {
   return (
     <Transition>
       <CartSection>
@@ -28,6 +28,6 @@ const Cart = () => {
       </CartSection>
     </Transition>
   );
-};
+}
 
 export default Cart;

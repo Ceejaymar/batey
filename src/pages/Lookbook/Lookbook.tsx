@@ -31,7 +31,7 @@ const StyledLazyLoadImage = styled(LazyLoadImage)`
   height: 100%;
 `;
 
-const Lookbook = () => {
+function Lookbook() {
   return (
     <Transition>
       <LookbookSection>
@@ -48,6 +48,6 @@ const Lookbook = () => {
       </LookbookSection>
     </Transition>
   );
-};
+}
 
 export default Lookbook;

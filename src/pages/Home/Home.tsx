@@ -197,7 +197,7 @@ const SubscribeButton = styled.button`
   }
 `;
 
-const Home: React.FC = () => {
+function Home() {
   return (
     <Transition>
       <HeaderSection>
@@ -251,6 +251,6 @@ const Home: React.FC = () => {
       </SubscribeSection>
     </Transition>
   );
-};
+}
 
 export default Home;
