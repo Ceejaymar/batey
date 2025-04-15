@@ -1,5 +1,7 @@
+import { type FC } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { siteLinks, socialLinks } from '../../config/appData';
 
 const FooterSection = styled.footer`
   display: flex;
@@ -76,7 +78,7 @@ const FooterBrand = styled.p`
 
 const FooterLink = styled(Link)``;
 
-const Footer: React.FC = () => (
+const Footer: FC = () => (
   <FooterSection>
     <SubscribeContent>
       <h4>Subscribe to our newsletter</h4>
@@ -89,20 +91,19 @@ const Footer: React.FC = () => (
     <SiteContent>
       <AboutContent>
         <h4>site map</h4>
-        <FooterLink to="/about">our story</FooterLink>
-        <FooterLink to="/lookbook">lookbook</FooterLink>
-        <FooterLink to="/shop">shop</FooterLink>
-        <FooterLink to="/contact">contact</FooterLink>
+        {siteLinks.map((link) => (
+          <FooterLink key={link.name} to={link.path}>
+            {link.name}
+          </FooterLink>
+        ))}
       </AboutContent>
       <ContactContent>
         <h4>follow us</h4>
-        <FooterLink to="https://www.instagram.com/steadyonthego">
-          instagram
-        </FooterLink>
-        <FooterLink to="https://www.youtube.com/@Losliving">youtube</FooterLink>
-        <FooterLink to="https://www.linkedin.com/in/carmart/">
-          linkedin
-        </FooterLink>
+        {socialLinks.map((link) => (
+          <FooterLink key={link.name} to={link.path}>
+            {link.name}
+          </FooterLink>
+        ))}
       </ContactContent>
     </SiteContent>
     <FooterBrand>batéy</FooterBrand>

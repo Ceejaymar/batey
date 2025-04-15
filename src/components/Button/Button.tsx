@@ -1,10 +1,11 @@
-interface ButtonProps {
+import { type FC, type PropsWithChildren } from 'react';
+
+interface ButtonProps extends PropsWithChildren {
   className: string;
-  children: React.ReactNode;
   onClick: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ className, children, onClick }) => {
+const Button: FC<ButtonProps> = ({ className, children, onClick }) => {
   return (
     <button className={className} onClick={onClick}>
       {children}

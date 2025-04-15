@@ -1,16 +1,15 @@
+import { type ButtonHTMLAttributes } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Transition from '../../utils/transition';
 import Button from '../../components/Button/Button';
 
-const SizeButton = styled(Button)<
-  React.ButtonHTMLAttributes<HTMLButtonElement>
->`
+const SizeButton = styled(Button)<ButtonHTMLAttributes<HTMLButtonElement>>`
   background-color: white;
 `;
 
-const Product: React.FC = () => {
+const Product = () => {
   const location = useLocation();
   const product = location.state?.product;
 
