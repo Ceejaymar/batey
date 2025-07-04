@@ -79,7 +79,7 @@ const FooterLink = styled(Link)``;
 
 function Footer() {
   return (
-    <FooterSection>
+    <FooterSection data-testid="footer">
       <SubscribeContent>
         <h4>Subscribe to our newsletter</h4>
         <p>Sign up and receive news, updates and product information.</p>

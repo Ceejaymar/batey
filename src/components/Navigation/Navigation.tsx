@@ -35,6 +35,15 @@ const NavLink = styled(NLink)`
   letter-spacing: -0.04rem;
 `;
 
+const links = [
+  // { name: 'Home', path: '/' },
+  { name: 'lookbook', path: 'lookbook' },
+  { name: 'about', path: 'about' },
+  { name: 'contact', path: 'contact' },
+  { name: 'shop', path: 'shop' },
+  { name: 'cart', path: 'cart' },
+];
+
 function Navigation() {
   return (
     <Nav data-testid="navigation">
@@ -42,21 +51,11 @@ function Navigation() {
         <Brand>Batéy</Brand>
       </NavLink>
       <NavList>
-        {/* <li>
-          <NavLink to="/">Home</NavLink>
-        </li> */}
-        <li>
-          <NavLink to="lookbook">lookbook</NavLink>
-        </li>
-        <li>
-          <NavLink to="about">our story</NavLink>
-        </li>
-        <li>
-          <NavLink to="contact">contact</NavLink>
-        </li>
-        <li>
-          <NavLink to="shop">shop</NavLink>
-        </li>
+        {links.map((link) => (
+          <li>
+            <NavLink to={`${link.path}`}>{link.name}</NavLink>
+          </li>
+        ))}
       </NavList>
       <div>
         <Link to="cart">
