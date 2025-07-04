@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { siteLinks, socialLinks } from '../../config/appData';
+
 import media from '../../utils/mediaQueries';
+import { siteLinks, socialLinks } from '../../config/appData';
 
 const FooterSection = styled.footer`
   display: flex;
@@ -84,8 +85,6 @@ const FooterBrand = styled.p`
   `}
 `;
 
-const FooterLink = styled(Link)``;
-
 function Footer() {
   return (
     <FooterSection data-testid="footer">
@@ -101,17 +100,22 @@ function Footer() {
         <AboutContent>
           <h4>site map</h4>
           {siteLinks.map((link) => (
-            <FooterLink key={link.name} to={link.path}>
+            <Link key={link.name} to={link.path}>
               {link.name}
-            </FooterLink>
+            </Link>
           ))}
         </AboutContent>
         <ContactContent>
           <h4>follow us</h4>
           {socialLinks.map((link) => (
-            <FooterLink key={link.name} to={link.path}>
+            <a
+              key={link.name}
+              href={link.path}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {link.name}
-            </FooterLink>
+            </a>
           ))}
         </ContactContent>
       </SiteContent>
