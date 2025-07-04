@@ -1,5 +1,5 @@
 export const breakpoints: { [key: string]: string } = {
-  default: '0px',
+  base: '0px',
   mobile: '320px',
   mobileWide: '480px',
   tablet: '768px',
