@@ -62,7 +62,7 @@ function Subscribe() {
   return (
     <SubscribeSection>
       <ImgContainer>
-        <img src={shirtsOnDisplay} />
+        <img src={shirtsOnDisplay} alt="Shirts on display" />
       </ImgContainer>
       <div>
         <h3>Join our community</h3>
