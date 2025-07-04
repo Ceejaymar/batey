@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { siteLinks, socialLinks } from '../../config/appData';
+import media from '../../utils/mediaQueries';
 
 const FooterSection = styled.footer`
   display: flex;
@@ -71,8 +72,16 @@ const ContactContent = styled.div`
 
 const FooterBrand = styled.p`
   font-family: 'EB Garamond';
-  font-size: 20rem;
+  font-size: 7rem;
   text-transform: uppercase;
+
+  ${media.tablet`
+    font-size: 15rem;
+  `}
+
+  ${media.desktop`
+    font-size: 20rem;
+  `}
 `;
 
 const FooterLink = styled(Link)``;
