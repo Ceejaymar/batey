@@ -9,8 +9,7 @@ type ProductProps = {
     images: string[];
     price: number;
   };
-  className?: string;
-  textColor?: 'white' | undefined;
+  textColor?: 'white';
 };
 
 interface CardProps {
