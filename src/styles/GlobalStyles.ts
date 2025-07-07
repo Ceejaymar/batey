@@ -26,6 +26,11 @@ export const GlobalStyles = createGlobalStyle`
     overflow-wrap: break-word;
   }
 
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
   @media (prefers-reduced-motion: reduce){
     html:focus-within {
       scroll-behavior: auto;

@@ -7,7 +7,8 @@ import { siteLinks, socialLinks } from '../../config/appData';
 const FooterSection = styled.footer`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
+  padding: 3rem 2rem;
 
   & h4 {
     margin-bottom: 1rem;
@@ -23,29 +24,32 @@ const FooterSection = styled.footer`
 `;
 
 const SubscribeContent = styled.div`
-  width: 400px;
+  /* width: 400px; */
   flex: 1;
 `;
 
 const Form = styled.form`
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
+  margin: 1.5rem 0;
 `;
 
 const FormInput = styled.input`
-  margin-top: 1rem;
-  padding: 1rem 1.1rem;
+  /* margin-top: 1rem; */
+  padding: 1rem 1rem;
   border: 1px solid black;
+  font-size: 1rem;
 `;
 
 const FormButton = styled.button`
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   padding: 1rem 2rem;
-  border: 1px solid black;
-  background-color: transparent;
+  border: 1px solid #284941;
+  background-color: #284941;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  color: white;
 
   &:hover {
     background-color: black;
@@ -54,11 +58,14 @@ const FormButton = styled.button`
 `;
 
 const SiteContent = styled.div`
+  margin-top: 2rem;
+  padding: 0 1rem;
   flex: 1;
   display: flex;
-  justify-content: end;
-  gap: 8rem;
-  padding-right: 5rem;
+  justify-content: space-between;
+  /* justify-content: end; */
+  /* gap: 8rem;  */
+  /* padding-right: 5rem; */
 `;
 
 const AboutContent = styled.div`
@@ -73,8 +80,11 @@ const ContactContent = styled.div`
 
 const FooterBrand = styled.p`
   font-family: 'EB Garamond';
-  font-size: 7rem;
+  font-size: 6rem;
   text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  top: 2rem;
 
   ${media.tablet`
     font-size: 15rem;
@@ -99,24 +109,25 @@ function Footer() {
       <SiteContent>
         <AboutContent>
           <h4>site map</h4>
-          {siteLinks.map((link) => (
-            <Link key={link.name} to={link.path}>
-              {link.name}
-            </Link>
-          ))}
+          <ul>
+            {siteLinks.map((link) => (
+              <li key={link.name}>
+                <Link to={link.path}>{link.name}</Link>
+              </li>
+            ))}
+          </ul>
         </AboutContent>
         <ContactContent>
           <h4>follow us</h4>
-          {socialLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.path}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.name}
-            </a>
-          ))}
+          <ul>
+            {socialLinks.map((link) => (
+              <li key={link.name}>
+                <a href={link.path} target="_blank" rel="noopener noreferrer">
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </ContactContent>
       </SiteContent>
       <FooterBrand>batéy</FooterBrand>

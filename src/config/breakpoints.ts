@@ -1,4 +1,4 @@
-export const breakpoints: { [key: string]: string } = {
+const breakpoints: { [key: string]: string } = {
   base: '0px',
   mobile: '320px',
   mobileWide: '480px',
@@ -7,3 +7,5 @@ export const breakpoints: { [key: string]: string } = {
   desktop: '1280px',
   desktopLarge: '1440px',
 };
+
+export default breakpoints;

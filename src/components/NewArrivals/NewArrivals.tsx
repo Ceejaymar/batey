@@ -13,13 +13,16 @@ const NewArrivalsSection = styled.section`
 
   & > div {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+    /* width: 100%; */
+    /* justify-content: space-between; */
     margin-top: 2rem;
   }
 
   & a {
     color: #284941;
-    max-width: 30%;
+    /* max-width: 30%; */
     display: flex;
     flex-direction: column;
   }

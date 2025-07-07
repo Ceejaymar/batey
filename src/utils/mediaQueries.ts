@@ -1,5 +1,5 @@
 import { css, type CSSProp } from 'styled-components';
-import { breakpoints } from '../config/breakpoints';
+import breakpoints from '../config/breakpoints';
 
 const media = Object.keys(breakpoints).reduce(
   (acc, label) => {

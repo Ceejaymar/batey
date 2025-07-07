@@ -7,9 +7,11 @@ import { products } from '../../config/products';
 
 const FeaturedProductSection = styled.section`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 4rem;
+  /* justify-content: center; */
   align-items: center;
-  height: 700px;
+  /* height: 700px; */
   padding: 3rem;
   background-image: url(${lcFeatured});
   background-size: cover;
@@ -22,10 +24,14 @@ const FeaturedProductSection = styled.section`
 const FeaturedDesc = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
+  /* justify-content: space-between; */
+
+  align-items: center;
+  /* align-items: start; */
+  gap: 3rem;
   height: 75%;
   max-width: 500px;
+  text-align: center;
 
   & h4 {
     font-size: 2rem;
@@ -35,9 +41,16 @@ const FeaturedDesc = styled.div`
   }
 `;
 
-const Product = styled.div`
+const ProductDiv = styled.div`
   max-width: 300px;
-  margin-right: 3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+  /* margin-right: 3rem; */
+`;
+
+const StyledPCard = styled(ProductCard)`
+  color: white;
 `;
 
 const Button = styled(Link)`
@@ -50,7 +63,7 @@ const Button = styled(Link)`
   text-decoration: none;
   text-transform: capitalize;
   border: 2px solid white;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   cursor: pointer;
   transition: all 0.3s;
   font-family: 'eb garamond';
@@ -75,9 +88,9 @@ function FeaturedProduct() {
         </div>
         <Button to="/shop">Shop Now</Button>
       </FeaturedDesc>
-      <Product>
-        <ProductCard product={products[9]} />
-      </Product>
+      <ProductDiv>
+        <StyledPCard product={products[9]} />
+      </ProductDiv>
     </FeaturedProductSection>
   );
 }
