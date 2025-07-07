@@ -10,13 +10,18 @@ type ProductProps = {
     price: number;
   };
   className?: string;
+  textColor?: 'white' | undefined;
 };
 
-const Card = styled(Link)`
+interface CardProps {
+  textColor?: 'white';
+}
+
+const Card = styled(Link)<CardProps>`
   flex-basis: 1;
   /* max-width: 17rem; */
   text-decoration: none;
-  color: #284941;
+  color: ${({ textColor }) => (textColor === 'white' ? 'white' : '#284941')};
 
   /* text-align: center; */
 
@@ -36,9 +41,13 @@ const Image = styled.img`
   /* border-radius: 0.5rem; */
 `;
 
-function ProductCard({ product, className }: ProductProps) {
+function ProductCard({ product, className, textColor }: ProductProps) {
   return (
-    <Card to={`/product/${product.productId}`} state={{ product }}>
+    <Card
+      to={`/product/${product.productId}`}
+      state={{ product }}
+      textColor={textColor}
+    >
       <Image src={product.images[0]} alt="Image of product" />
 
       <div className={className}>

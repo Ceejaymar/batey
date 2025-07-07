@@ -49,10 +49,6 @@ const ProductDiv = styled.div`
   /* margin-right: 3rem; */
 `;
 
-const StyledPCard = styled(ProductCard)`
-  color: white;
-`;
-
 const Button = styled(Link)`
   display: inline-block;
   background-color: transparent;
@@ -89,7 +85,7 @@ function FeaturedProduct() {
         <Button to="/shop">Shop Now</Button>
       </FeaturedDesc>
       <ProductDiv>
-        <StyledPCard product={products[9]} />
+        <ProductCard product={products[9]} textColor="white" />
       </ProductDiv>
     </FeaturedProductSection>
   );
