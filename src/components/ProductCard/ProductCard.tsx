@@ -41,7 +41,7 @@ const Image = styled.img`
   /* border-radius: 0.5rem; */
 `;
 
-function ProductCard({ product, className, textColor }: ProductProps) {
+function ProductCard({ product, textColor }: ProductProps) {
   return (
     <Card
       to={`/product/${product.productId}`}
@@ -50,7 +50,7 @@ function ProductCard({ product, className, textColor }: ProductProps) {
     >
       <Image src={product.images[0]} alt="Image of product" />
 
-      <div className={className}>
+      <div>
         <p>{product.name}</p>
         <p>${product.price}</p>
       </div>
