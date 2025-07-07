@@ -26,6 +26,11 @@ export const GlobalStyles = createGlobalStyle`
     overflow-wrap: break-word;
   }
 
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
   @media (prefers-reduced-motion: reduce){
     html:focus-within {
       scroll-behavior: auto;
@@ -41,13 +46,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .fade {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #0f0f0f;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0f0f0f;
+  }
 
   .slide-in {
     position: fixed;

@@ -9,24 +9,30 @@ type ProductProps = {
     images: string[];
     price: number;
   };
+  textColor?: 'white';
 };
 
-const Card = styled(Link)`
+interface CardProps {
+  textColor?: 'white';
+}
+
+const Card = styled(Link)<CardProps>`
   flex-basis: 1;
-  max-width: 17rem;
+  /* max-width: 17rem; */
   text-decoration: none;
-  color: #284941;
+  color: ${({ textColor }) => (textColor === 'white' ? 'white' : '#284941')};
 
   /* text-align: center; */
 
   & img {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   & div {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
+    font-weight: 500;
   }
 `;
 
@@ -34,9 +40,13 @@ const Image = styled.img`
   /* border-radius: 0.5rem; */
 `;
 
-function ProductCard({ product }: ProductProps) {
+function ProductCard({ product, textColor }: ProductProps) {
   return (
-    <Card to={`/product/${product.productId}`} state={{ product }}>
+    <Card
+      to={`/product/${product.productId}`}
+      state={{ product }}
+      textColor={textColor}
+    >
       <Image src={product.images[0]} alt="Image of product" />
 
       <div>

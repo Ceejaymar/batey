@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { type PropsWithChildren } from 'react';
 import { motion } from 'framer-motion';
 
 const animation = {
@@ -7,7 +7,7 @@ const animation = {
   exit: { opacity: 0, y: 0 },
 };
 
-const Transition = ({ children }: { children: ReactNode }) => {
+const Transition = ({ children }: PropsWithChildren) => {
   return (
     <motion.div
       variants={animation}

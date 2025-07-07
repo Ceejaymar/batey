@@ -2,16 +2,25 @@ import { Link, NavLink as NLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { ShoppingCart } from '@phosphor-icons/react';
 
+import media from '../../utils/mediaQueries';
+
 const Nav = styled.nav`
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
   padding: 1.5rem 0;
+  position: relative;
+
+  ${media.tablet`
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+  `}
 `;
 
 const Brand = styled.span`
   font-family: 'EB Garamond';
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
@@ -23,8 +32,13 @@ const NavList = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-left: auto;
+  /* margin-left: auto; */
+  padding: 0;
   list-style: none;
+
+  ${media.tablet`
+    margin-left: auto;
+  `}
 `;
 
 const NavLink = styled(NLink)`
@@ -35,6 +49,26 @@ const NavLink = styled(NLink)`
   letter-spacing: -0.04rem;
 `;
 
+const CartContainer = styled.div`
+  position: absolute;
+  right: 1.5rem;
+  top: 1.8rem;
+
+  ${media.tablet`
+    position: relative;
+    right: 0;
+    top: 0;
+  `}
+`;
+
+const links = [
+  // { name: 'Home', path: '/' },
+  { name: 'lookbook', path: 'lookbook' },
+  { name: 'about', path: 'about' },
+  { name: 'contact', path: 'contact' },
+  { name: 'shop', path: 'shop' },
+];
+
 function Navigation() {
   return (
     <Nav data-testid="navigation">
@@ -42,23 +76,13 @@ function Navigation() {
         <Brand>Batéy</Brand>
       </NavLink>
       <NavList>
-        {/* <li>
-          <NavLink to="/">Home</NavLink>
-        </li> */}
-        <li>
-          <NavLink to="lookbook">lookbook</NavLink>
-        </li>
-        <li>
-          <NavLink to="about">our story</NavLink>
-        </li>
-        <li>
-          <NavLink to="contact">contact</NavLink>
-        </li>
-        <li>
-          <NavLink to="shop">shop</NavLink>
-        </li>
+        {links.map((link) => (
+          <li key={link.name}>
+            <NavLink to={`${link.path}`}>{link.name}</NavLink>
+          </li>
+        ))}
       </NavList>
-      <div>
+      <CartContainer>
         <Link to="cart">
           <ShoppingCart
             aria-label="View shopping cart"
@@ -67,7 +91,7 @@ function Navigation() {
             color="black"
           />
         </Link>
-      </div>
+      </CartContainer>
     </Nav>
   );
 }
