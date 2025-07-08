@@ -42,7 +42,7 @@ function ProductCard({ product, textColor }: ProductProps) {
       state={{ product }}
       textColor={textColor}
     >
-      <img src={product.images[0]} alt="Image of product" />
+      <img src={product.images[0]} alt={product.name} />
 
       <div>
         <p>{product.name}</p>
