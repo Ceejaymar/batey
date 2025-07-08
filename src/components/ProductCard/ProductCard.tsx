@@ -16,13 +16,12 @@ interface CardProps {
   textColor?: 'white';
 }
 
-const Card = styled(Link)<CardProps>`
+const Card = styled(Link).withConfig({
+  shouldForwardProp: (prop) => prop != 'textColor',
+})<CardProps>`
   flex-basis: 1;
-  /* max-width: 17rem; */
   text-decoration: none;
   color: ${({ textColor }) => (textColor === 'white' ? 'white' : '#284941')};
-
-  /* text-align: center; */
 
   & img {
     margin-bottom: 0.5rem;
@@ -36,10 +35,6 @@ const Card = styled(Link)<CardProps>`
   }
 `;
 
-const Image = styled.img`
-  /* border-radius: 0.5rem; */
-`;
-
 function ProductCard({ product, textColor }: ProductProps) {
   return (
     <Card
@@ -47,7 +42,7 @@ function ProductCard({ product, textColor }: ProductProps) {
       state={{ product }}
       textColor={textColor}
     >
-      <Image src={product.images[0]} alt="Image of product" />
+      <img src={product.images[0]} alt={product.name} />
 
       <div>
         <p>{product.name}</p>

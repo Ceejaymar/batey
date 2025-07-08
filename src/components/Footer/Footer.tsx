@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import media from '../../utils/mediaQueries';
+import breakpoints from '../../config/breakpoints';
 import { siteLinks, socialLinks } from '../../config/appData';
 
 const FooterSection = styled.footer`
   display: flex;
   flex-wrap: wrap;
-  /* margin-top: 5rem; */
   padding: 3rem 2rem;
 
   & h4 {
@@ -24,7 +23,6 @@ const FooterSection = styled.footer`
 `;
 
 const SubscribeContent = styled.div`
-  /* width: 400px; */
   flex: 1;
 `;
 
@@ -33,17 +31,19 @@ const Form = styled.form`
   flex-direction: column;
   gap: 1rem;
   margin: 1.5rem 0;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+  }
 `;
 
 const FormInput = styled.input`
-  /* margin-top: 1rem; */
   padding: 1rem 1rem;
   border: 1px solid black;
   font-size: 1rem;
 `;
 
 const FormButton = styled.button`
-  /* margin-top: 1rem; */
   padding: 1rem 2rem;
   border: 1px solid #284941;
   background-color: #284941;
@@ -63,9 +63,20 @@ const SiteContent = styled.div`
   flex: 1;
   display: flex;
   justify-content: space-between;
-  /* justify-content: end; */
-  /* gap: 8rem;  */
-  /* padding-right: 5rem; */
+
+  @media (min-width: ${breakpoints.mobileWide}) {
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+  }
 `;
 
 const AboutContent = styled.div`
@@ -86,13 +97,13 @@ const FooterBrand = styled.p`
   position: relative;
   top: 2rem;
 
-  ${media.tablet`
-    font-size: 15rem;
-  `}
+  @media (min-width: ${breakpoints.tablet}) {
+    font-size: 12rem;
+  }
 
-  ${media.desktop`
-    font-size: 20rem;
-  `}
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: 17rem;
+  }
 `;
 
 function Footer() {

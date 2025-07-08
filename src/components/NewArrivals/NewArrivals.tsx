@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import ProductCard from '../ProductCard/ProductCard';
+import breakpoints from '../../config/breakpoints';
 import { products } from '../../config/products';
 
 const NewArrivalsSection = styled.section`
@@ -15,21 +16,18 @@ const NewArrivalsSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* width: 100%; */
-    /* justify-content: space-between; */
     margin-top: 2rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+      flex-direction: row;
+    }
   }
 
   & a {
     color: #284941;
-    /* max-width: 30%; */
+
     display: flex;
     flex-direction: column;
-  }
-
-  & p {
-    /* display: inline-block; */
-    /* text-align: start; */
   }
 `;
 

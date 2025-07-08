@@ -2,7 +2,7 @@ import { Link, NavLink as NLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { ShoppingCart } from '@phosphor-icons/react';
 
-import media from '../../utils/mediaQueries';
+import breakpoints from '../../config/breakpoints';
 
 const Nav = styled.nav`
   display: flex;
@@ -12,10 +12,10 @@ const Nav = styled.nav`
   padding: 1.5rem 0;
   position: relative;
 
-  ${media.tablet`
+  @media (min-width: ${breakpoints.tablet}) {
     flex-direction: row;
     padding: 1.5rem 2rem;
-  `}
+  }
 `;
 
 const Brand = styled.span`
@@ -32,13 +32,12 @@ const NavList = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  /* margin-left: auto; */
   padding: 0;
   list-style: none;
 
-  ${media.tablet`
+  @media (min-width: ${breakpoints.tablet}) {
     margin-left: auto;
-  `}
+  }
 `;
 
 const NavLink = styled(NLink)`
@@ -54,11 +53,11 @@ const CartContainer = styled.div`
   right: 1.5rem;
   top: 1.8rem;
 
-  ${media.tablet`
+  @media (min-width: ${breakpoints.tablet}) {
     position: relative;
     right: 0;
     top: 0;
-  `}
+  }
 `;
 
 const links = [

@@ -13,6 +13,12 @@ const SubscribeSection = styled.section`
   background-color: #ede4d8;
   color: #284941;
 
+  @media (min-width: ${breakpoints.tablet}) {
+    padding: 1rem 2rem;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+
   & h3 {
     font-family: 'EB Garamond';
     font-size: 3rem;
@@ -23,6 +29,10 @@ const SubscribeSection = styled.section`
 
   & form {
     margin-top: 3rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+      margin-top: 2rem;
+    }
   }
 `;
 
@@ -49,16 +59,12 @@ const Form = styled.form`
 `;
 
 const SubscribeInput = styled.input`
-  /* padding: 0.8rem 1.1rem; */
   padding: 1rem 1rem;
   border: 1px solid #284941;
-  /* margin-right: 1rem; */
   font-size: 1rem;
 `;
 
 const SubscribeButton = styled.button`
-  /* display: flex; */
-  /* align-items: center; */
   color: #ffffff;
   border: 1px solid #f3a047;
   font-size: 1rem;
@@ -72,6 +78,10 @@ const SubscribeButton = styled.button`
     background-color: #284941;
     color: white;
     border-color: #284941;
+  }
+
+  @media (min-width: ${breakpoints.mobileWide}) {
+    padding: 1rem 2.5rem;
   }
 `;
 
