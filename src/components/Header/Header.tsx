@@ -10,7 +10,6 @@ const HeaderSection = styled.section`
   justify-content: center;
   align-items: center;
   padding: 3rem 2rem;
-  /* height: 700px; */
   background-image: url(${headerImage});
   background-size: cover;
   background-position: center;
@@ -24,8 +23,12 @@ const HeaderSection = styled.section`
     text-shadow: 2px 2px 2px #00000011;
   }
 
-  @media (max-width: ${breakpoints.tablet}) {
-    /* width: 80%; */
+  @media (min-width: ${breakpoints.tablet}) {
+    height: 600px;
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    height: 700px;
   }
 `;
 
@@ -35,7 +38,6 @@ const HeaderH2 = styled.h2`
   text-align: center;
   color: white;
   margin-bottom: 2rem;
-  /* width: 40%; */
 
   @media (min-width: ${breakpoints.tablet}) {
     font-size: 4rem;

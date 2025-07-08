@@ -12,7 +12,6 @@ const QuoteSection = styled.section`
   font-weight: 300;
   font-style: italic;
   padding: 2.5rem;
-  /* height: 350px; */
   background-color: #284941;
   color: #ede4d8;
 

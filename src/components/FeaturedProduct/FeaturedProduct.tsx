@@ -3,15 +3,14 @@ import styled from 'styled-components';
 
 import ProductCard from '../ProductCard/ProductCard';
 import lcFeatured from '../../assets/images/home/lc-featured.jpg';
+import breakpoints from '../../config/breakpoints';
 import { products } from '../../config/products';
 
 const FeaturedProductSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  /* justify-content: center; */
   align-items: center;
-  /* height: 700px; */
   padding: 3rem;
   background-image: url(${lcFeatured});
   background-size: cover;
@@ -19,15 +18,21 @@ const FeaturedProductSection = styled.section`
   border-image: linear-gradient(hsla(0, 0%, 0%, 0.4), hsla(0, 0%, 0%, 0.4)) fill
     1;
   color: white;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    justify-content: space-around;
+  }
 `;
 
 const FeaturedDesc = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 
   align-items: center;
-  /* align-items: start; */
   gap: 3rem;
   height: 75%;
   max-width: 500px;
@@ -46,7 +51,6 @@ const ProductDiv = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
   padding: 1rem;
   border-radius: 5px;
-  /* margin-right: 3rem; */
 `;
 
 const Button = styled(Link)`

@@ -36,9 +36,7 @@ const Card = styled(Link)<CardProps>`
   }
 `;
 
-const Image = styled.img`
-  /* border-radius: 0.5rem; */
-`;
+const Image = styled.img``;
 
 function ProductCard({ product, textColor }: ProductProps) {
   return (
