@@ -36,12 +36,12 @@ function Lookbook() {
     <Transition>
       <LookbookSection>
         {catalogue.map((product, index) => (
-          <ImageWrapper>
+          <ImageWrapper key={index}>
             <StyledLazyLoadImage
-              key={index}
               src={product}
               effect="blur"
               placeholderSrc={placeholderImg}
+              alt="Lookbook product"
             />
           </ImageWrapper>
         ))}
